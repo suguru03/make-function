@@ -17,11 +17,27 @@ var args = ['a', 'b'];
 var fstr = '{ return a + b; }';
 
 var func = new Function(args, fstr);
-var namedFunc = makeFunc(name, args, fstr);
+var newFunc = makeFunc(name, args, fstr);
 console.log(func.name); // "anonymous"
 console.log(func(1, 2)); // 3
-console.log(namedfunc.name); // "test"
-console.log(namedfunc(1, 2)); // 3
+console.log(newFunc.name); // "test"
+console.log(newFunc(1, 2)); // 3
+
+// two arguments
+var newFunc = makeFunc(args, fstr);
+console.log(func.name); // "anonymous"
+console.log(func(1, 2)); // 3
+
+// a argument
+var fstr = '{ return 0; }';
+var newFunc = makeFunc(fstr);
+console.log(func.name); // "anonymous"
+console.log(func(1, 2)); // 0
+
+// no arguments
+var newFunc = makeFunc();
+console.log(func.name); // "anonymous"
+console.log(func(1, 2)); // undefined
 ```
 
 makeFunction.rename(func, name)
@@ -30,10 +46,11 @@ makeFunction.rename(func, name)
 - name: new function name
 
 ```js
+var makeFunc = require('make-function');
 var func = function(a, b) {
   return a + b;
 };
-var namedFunc = makeFunc.rename(func, 'test');
-console.log(namedFunc.name); // "test"
+var newFunc = makeFunc.rename(func, 'test');
+console.log(newFunc.name); // "test"
 console.log(namedfunc(1, 2)); // 3
 ```
