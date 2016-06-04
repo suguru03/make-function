@@ -11,7 +11,7 @@ makeFunction(name, args, fstr)
 - fstr: string of function
 
 ```js
-var makeFunc = require('make-funciton');
+var makeFunc = require('make-function');
 var name = 'test';
 var args = ['a', 'b'];
 var fstr = '{ return a + b; }';
