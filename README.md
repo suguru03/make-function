@@ -2,9 +2,9 @@
 
 This module supports making named function and copy renamed function.
 
-### Feature
+## Feature
 
-makeFunction(name, args, fstr)
+### makeFunction(name, args, fstr)
 
 - name: new function name
 - args: arguments of the new function
@@ -40,7 +40,7 @@ console.log(func.name); // "anonymous"
 console.log(func(1, 2)); // undefined
 ```
 
-makeFunction.rename(func, name)
+### makeFunction.rename(func, name)
 
 - func: target function
 - name: new function name
