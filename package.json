@@ -1,6 +1,6 @@
 {
   "name": "make-function",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "making named function and renamed funciton",
   "main": "index.js",
   "scripts": {
