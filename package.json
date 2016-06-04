@@ -1,7 +1,7 @@
 {
   "name": "make-function",
   "version": "0.0.0",
-  "description": "",
+  "description": "making named function and renamed funciton",
   "main": "index.js",
   "scripts": {
     "test": "mocha test --recursive"
